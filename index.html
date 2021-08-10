@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+    *, *::after, *::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 16px;
+
+      width: 100vw;
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(225, 100%, 94%);
+      background-image: url(images/pattern-background-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .card {
+      background-color: rgb(255, 255, 255);
+      width: 390px;
+      max-height: 590px;
+      text-align: center;
+      border-radius: 15px;
+    }
+
+    .card .card-head {
+      width: 390px;
+      object-fit: contain;
+
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+    }
+
+    .card .card-body {
+      padding: 0 25px;
+    }
+
+    .card h1 {
+      margin: 30px 0 10px 0;
+    }
+
+    .card .plan {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color:  hsl(225, 100%, 98%);
+      margin: 30px 25px;
+      padding: 15px;
+      border-radius: 15px;
+    }
+
+    .card .plan-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card .plan-info-text {
+      margin-left: 15px;
+    }
+
+    .card .card-footer {
+      display: flex;
+      flex-direction: column;
+      padding: 0 25px;
+    }
+
+    .card .proceed-btn {
+      padding: 10px 20px;
+      color: #fff;
+      background-color: hsl(245, 75%, 52%);
+      border-radius: 15px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .card .cancel-btn {
+      color: hsl(224, 23%, 55%);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+
+      margin: 15px 0;
+    }
+
+    @media screen and (max-width: 1010px) {
+      body {
+        background-image: url(images/pattern-background-mobile.svg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="card-head" src="images/illustration-hero.svg" alt="illustration hero">
+    <div class="card-body">
+      <h1>Order Summary</h1>
+      <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+      <div class="plan">
+        <div class="plan-info">
+          <img src="images/icon-music.svg" alt="icon music">
+          <div class="plan-info-text">
+            <h4 class="plan-name">Annual Plan</h4>
+            <p class="plan-price">$59.99/year</p>
+          </div>
+        </div>
+        <a href="#">Change</a>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="#" class="proceed-btn">Proceed to Payment</a>
+      <a href="#" class="cancel-btn">Cancel Order</a>
+    </div>
+  </div>
+</body>
+</html>
